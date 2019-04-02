@@ -46,6 +46,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -75,6 +77,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(25)))), ((int)(((byte)(41)))));
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.button3);
@@ -98,20 +102,20 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(145)))), ((int)(((byte)(199)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(25)))), ((int)(((byte)(41)))));
-            this.label2.Location = new System.Drawing.Point(15, 133);
+            this.label2.Location = new System.Drawing.Point(16, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 32);
+            this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 43;
-            this.label2.Text = "Add or Remove \r\na Class";
+            this.label2.Text = "Add Class";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(25)))), ((int)(((byte)(41)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 179);
+            this.dataGridView1.Location = new System.Drawing.Point(19, 203);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(265, 86);
+            this.dataGridView1.Size = new System.Drawing.Size(265, 62);
             this.dataGridView1.TabIndex = 42;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -123,12 +127,13 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(25)))), ((int)(((byte)(41)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(25)))), ((int)(((byte)(41)))));
-            this.button3.Location = new System.Drawing.Point(215, 132);
+            this.button3.Location = new System.Drawing.Point(216, 164);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(61, 23);
+            this.button3.Size = new System.Drawing.Size(61, 21);
             this.button3.TabIndex = 38;
             this.button3.Text = "Remove";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -138,12 +143,13 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(25)))), ((int)(((byte)(41)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(25)))), ((int)(((byte)(41)))));
-            this.button1.Location = new System.Drawing.Point(143, 132);
+            this.button1.Location = new System.Drawing.Point(112, 126);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(49, 23);
+            this.button1.Size = new System.Drawing.Size(49, 27);
             this.button1.TabIndex = 36;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
@@ -227,7 +233,7 @@
             this.textBox4.Location = new System.Drawing.Point(0, 0);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(216, 27);
+            this.textBox4.Size = new System.Drawing.Size(173, 27);
             this.textBox4.TabIndex = 18;
             // 
             // label4
@@ -249,9 +255,9 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(25)))), ((int)(((byte)(41)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(218)))), ((int)(((byte)(241)))));
-            this.button4.Location = new System.Drawing.Point(160, 145);
+            this.button4.Location = new System.Drawing.Point(129, 137);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(49, 23);
+            this.button4.Size = new System.Drawing.Size(49, 29);
             this.button4.TabIndex = 39;
             this.button4.UseVisualStyleBackColor = false;
             // 
@@ -263,11 +269,35 @@
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(25)))), ((int)(((byte)(41)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(218)))), ((int)(((byte)(241)))));
-            this.button5.Location = new System.Drawing.Point(230, 145);
+            this.button5.Location = new System.Drawing.Point(231, 177);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(54, 23);
+            this.button5.Size = new System.Drawing.Size(54, 21);
             this.button5.TabIndex = 40;
             this.button5.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(145)))), ((int)(((byte)(199)))));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(25)))), ((int)(((byte)(41)))));
+            this.label3.Location = new System.Drawing.Point(16, 174);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(148, 15);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "Enter RowNum to remove";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(117)))), ((int)(((byte)(168)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(25)))), ((int)(((byte)(41)))));
+            this.textBox1.Location = new System.Drawing.Point(184, 174);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(26, 23);
+            this.textBox1.TabIndex = 45;
             // 
             // UserControl4
             // 
@@ -313,5 +343,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

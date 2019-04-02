@@ -44,10 +44,12 @@ Persist Security Info=False;";
                     connection.Open();
                 }
 
+                string dayTime = DateTime.Now.ToString("yyyy-MM-dd h:mm:ss tt");
+
                 OleDbCommand cmd = connection.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "insert into RoutineList(UserName, Gender, Height, Weight, UserSchool, Routine) values('"+ textBox6.Text + "','" + comboBox1.Text + "','" + textBox4.Text.Replace("'", "''") + "','" + 
-                textBox5.Text + "','" + textBox2.Text + "','" + textBox1.Text + "')";
+                cmd.CommandText = "insert into RoutineList(UserName, Gender, Height, Weight, UserSchool, Routine, RoutineDate) values('"+ textBox6.Text + "','" + comboBox1.Text + "','" + textBox4.Text.Replace("'", "''") + "','" + 
+                textBox5.Text + "','" + textBox2.Text + "','" + textBox1.Text + "','" + dayTime + "')";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Info inserted into database successfully");
 
